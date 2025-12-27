@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0a0a0a;
+}
+
+/* 🎮 Start Screen Layout */
+.start-screen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  font-family: "Press Start 2P", monospace;
+  color: #e9ffe0;
+  text-align: center;
+
+  /* glowing vignette effect */
+  background: radial-gradient(circle at center, #132a19, #070707, #000);
+}
+
+/* 🌟 Animated glow behind title */
+.start-screen::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, #4aff7b22, transparent 60%);
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* 🏁 Title */
+.title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 6px #5cff8d, 0 0 12px #3ecf63;
+  margin-bottom: 4px;
+}
+
+/* ✨ Subtitle */
+.subtitle {
+  font-size: 10px;
+  opacity: 0.8;
+  color: #b8ffca;
+}
+
+/* 🟢 Pixel Start Button */
+.start-btn {
+  margin-top: 10px;
+  padding: 14px 22px;
+
+  font-family: "Press Start 2P";
+  font-size: 12px;
+  letter-spacing: 1px;
+
+  border: 2px solid #5cff8d;
+  background: #122d19;
+  color: #b8ffc8;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  box-shadow: 0 0 10px #5cff8d44;
+
+  transition: all 0.15s ease;
+}
+
+/* 🕹 Retro Hover Effect */
+.start-btn:hover {
+  background: #1a4a26;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px #5cff8d99;
+}
+
+/* 🟨 Pressed / Active */
+.start-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 6px #5cff8d55;
+}
