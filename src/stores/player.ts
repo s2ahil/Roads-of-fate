@@ -41,6 +41,9 @@ export function stepCompleted() {
     stepSound.currentTime = 0;
     stepSound.play();
     const direction = state.movesQueue.shift()
+    //extra
+    const status = useGameStore.getState().status;
+    if (status !== "running") return;
 
     if (direction === "forward") state.currentRow += 1;
     if (direction === "backward") state.currentRow -= 1;
@@ -68,6 +71,6 @@ export function reset() {
     if (!state.ref) return
     state.ref.position.x = 0
     state.ref.position.y = 0
-    
+
     state.ref.children[0].rotation.z = 0
 }

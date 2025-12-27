@@ -10,6 +10,7 @@ export function Map() {
   return (
     <>
       <Grass rowIndex={0}> </Grass>
+      <Grass rowIndex={0}> </Grass>
       <Grass rowIndex={-1}> </Grass>
       <Grass rowIndex={-2}> </Grass>
       <Grass rowIndex={-3}> </Grass>
