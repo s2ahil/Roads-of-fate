@@ -99,3 +99,30 @@ body {
   transform: translateY(1px);
   box-shadow: 0 0 6px #5cff8d55;
 }
+
+
+.char-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.char-card {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px #0003;
+  transition: transform .15s, border-color .15s;
+}
+
+.char-card:hover {
+  transform: scale(1.05);
+}
+
+.char-card.selected {
+  border-color: #ffd84d;
+  box-shadow: 0 0 12px #ffec8a;
+}
